@@ -18,6 +18,8 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -30,9 +32,11 @@ main {
 
 .landing {
 	min-height: 100vh;
-	background: url(/images/pic02.jpg);
+	background: url(/images/moon.jpg);
 	background-size: cover;
+	background-position-x: center;
 	padding: 0rem 5rem;
+	color: whitesmoke;
 }
 nav{
 	display: flex;
@@ -44,21 +48,38 @@ nav{
 	display: flex;
 	list-style: none;
 }
-.nav-links li {
+a:visited {
+	color: whitesmoke;
+	text-decoration: none;
+}
+a:link {
+	color: whitesmoke;
+	text-decoration: none;
+}
+a:visited {
+	color: whitesmoke;
+	text-decoration: none;
+}
+a:visited {
+	color: whitesmoke;
+	text-decoration: none;
+}
+li {
 	padding-left: 5rem;
 }
 #logo {
-	font-family: 'Montserrat', sans-serif;
+	height: 10vh;
 }
 .big-text {
 	position: absolute;
 	top: 30%;
 	left: 50%;
-	transform: translate(-50%, -30%)
+	transform: translate(-50%, -30%);
+	height: clamp(0rem, 80vh, 10rem);
 }
 
 .intro{
-	background: black;
+	background: rgb(0, 0, 0);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -74,7 +95,7 @@ nav{
 }
 
 .slider{
-	background: rgb(29, 29, 29);
+	background: rgb(10, 10, 10);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -84,10 +105,79 @@ nav{
 }
 
 .hide {
-	background: black;
+	background: rgb(0, 0, 0);
 	overflow: hidden;
 }
 .hide span {
 	transform: translateY(100%);
 	display: inline-block;
+}
+
+button {
+	background: black;
+	border: none;
+	color: whitesmoke;
+	padding: .5em 1em;
+	font-size: 1.3em;
+	cursor: pointer;	
+}
+.overlay {
+	clip-path: circle(10%);
+	position: fixed;
+	background: rgba(0, 0, 0, 0.781);
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
+
+
+}
+.exit {
+	position: absolute;
+	right: 2em;
+	top: 2em;
+}
+.menu {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+}
+
+.menu ul {
+	list-style-type: none;
+
+}
+
+.menu-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.menu ul li a {
+	text-decoration: none;
+	color: whitesmoke;
+	display: block;
+	padding: .8em 2em .8em 1em;
+	font-size: 1.5em;
+	
+
+}
+
+.menu ul li a:hover {
+	background: rgba(20, 20, 20, 0.4884);
+	border-radius: 1.2m
+}
+
+p.category {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: whitesmoke;
+	
+}
+
+.exit img {
+	width: 23px;
+	height: 23px;
 }
